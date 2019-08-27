@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Registro</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="./script.js"></script>
+  <style>
+    .form-container {
+      border: 1px solid #D5DBDB;
+      border-radius: 5px;
+      padding: 1em;
+    }
+
+    label {
+      width: 30%;
+    }
+
+    input {
+      width: 70%;
+      border-radius: 3px;
+      border: 1px solid #D5DBDB;
+    }
+
+    select {
+      width: 70%;
+    }
+
+    .input-container {
+      margin-top: 0.2em;
+    }
+
+    #register-button {
+      background-color: white;
+      border-radius: 5px;
+      border: 1px solid #808B96;
+      color: #283747;
+    }
+
+    #register-button:hover {
+      background-color: #D5DBDB;
+      color: #F2F4F4;
+      border: 1px solid #F4F6F6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-10 col-md-6 col-xl-4 form-container">
+        <div class="row justify-content-center mb-2">
+          <div class="col-6">
+            <img class="img-fluid" src="./logo_anima_completo-01.png" alt="Logo Anima">
+          </div>
+        </div>
+        <form action="javascript:void(0);" name="formulario">
+          <div class="input-container">
+            <label for="inpt-name">Nombre: *</label><input type="text" name="nombre" id="inpt-name" minlength="3"
+              required>
+          </div>
+          <div class="input-container">
+            <label for="inpt-age">Edad: *</label><input type="number" name="edad" id="inpt-age" required>
+          </div>
+          <div class="input-container">
+            <label for="curso">Curso: *</label><select name="curso" id="inpt-curso" required>
+              <option value="1-tic">1ero TIC</option>
+              <option value="1-adm">1ero Administración</option>
+              <option value="2-tic">2ndo TIC</option>
+              <option value="2-adm">2ndo Administración</option>
+              <option value="3-tic">3ero TIC</option>
+              <option value="3-tic">3ero Administración</option>
+            </select>
+          </div>
+          <div class="input-container">
+            <label class="align-middle" for="inpt-date">Fecha de Ingreso: *</label><input class="align-middle" type="date" name="fecha"
+              id="inpt-date" required>
+          </div>
+          <div class="input-container text-center">
+            <button id="register-button" onclick="registrarUsuario()">Registrarse</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
